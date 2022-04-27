@@ -1,0 +1,11 @@
+.footer {
+  padding-top: 100px;
+  text-align: center;
+
+  @include text(
+    $f_size: 16px,
+    $f_weight: 400,
+    $l_height: 24px,
+    $color: $independence
+  );
+}

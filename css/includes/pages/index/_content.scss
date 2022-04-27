@@ -36,9 +36,13 @@
         );
 
         .status {
-          span {
+          a {
             &:nth-of-type(2) {
               margin: 0 10px;
+            }
+
+            &:hover {
+              color: $ultramarine_blue;
             }
           }
         }

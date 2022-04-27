@@ -133,7 +133,21 @@
   font-weight: 400;
 }
 
-.content ul li:last-child .status span:nth-of-type(2) {
+.content ul li:last-child .status a:nth-of-type(2) {
   margin: 0 10px;
+}
+
+.content ul li:last-child .status a:hover {
+  color: #3a7bfd;
+}
+
+.footer {
+  padding-top: 100px;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #484b6a;
+  font-weight: 400;
 }
 /*# sourceMappingURL=main.css.map */
