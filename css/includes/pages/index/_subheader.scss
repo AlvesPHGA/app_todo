@@ -4,4 +4,30 @@
   height: 400px;
   background-size: cover;
   margin-top: -130px;
+  display: flex;
+
+  .__width-1200 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .new_todo {
+      height: fit-content;
+      width: 70%;
+      border-radius: 5px;
+      padding: 10px 20px;
+      border: 0;
+
+      @include text(
+        $f_size: 20px,
+        $f_weight: 400,
+        $l_height: 30px,
+        $color: $independence
+      );
+
+      &::placeholder {
+        color: $manatee;
+      }
+    }
+  }
 }

@@ -1,0 +1,48 @@
+.content {
+  display: flex;
+  justify-content: center;
+
+  ul {
+    width: 70%;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.4);
+    margin-top: -100px;
+    background: $white;
+
+    li {
+      padding: 10px 20px;
+      border-bottom: 1px solid $manatee;
+      list-style: none;
+
+      @include text(
+        $f_size: 20px,
+        $f_weight: 400,
+        $l_height: 30px,
+        $color: $independence
+      );
+
+      &:last-child {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 0;
+
+        @include text(
+          $f_size: 16px,
+          $f_weight: 400,
+          $l_height: 24px,
+          $color: $independence
+        );
+
+        .status {
+          span {
+            &:nth-of-type(2) {
+              margin: 0 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

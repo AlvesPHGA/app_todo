@@ -37,5 +37,103 @@
   height: 400px;
   background-size: cover;
   margin-top: -130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.subheader .__width-1200 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.subheader .__width-1200 .new_todo {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 70%;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: #484b6a;
+  font-weight: 400;
+}
+
+.subheader .__width-1200 .new_todo::-webkit-input-placeholder {
+  color: #9394a5;
+}
+
+.subheader .__width-1200 .new_todo:-ms-input-placeholder {
+  color: #9394a5;
+}
+
+.subheader .__width-1200 .new_todo::-ms-input-placeholder {
+  color: #9394a5;
+}
+
+.subheader .__width-1200 .new_todo::placeholder {
+  color: #9394a5;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content ul {
+  width: 70%;
+  border: 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.4);
+  margin-top: -100px;
+  background: #fff;
+}
+
+.content ul li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #9394a5;
+  list-style: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: #484b6a;
+  font-weight: 400;
+}
+
+.content ul li:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #484b6a;
+  font-weight: 400;
+}
+
+.content ul li:last-child .status span:nth-of-type(2) {
+  margin: 0 10px;
 }
 /*# sourceMappingURL=main.css.map */
