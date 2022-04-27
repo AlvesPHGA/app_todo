@@ -3,5 +3,12 @@
 @import "./mixins/media";
 @import "./mixins/fonts";
 
+@import "./main/main";
+
+@import "./utils/class";
+
 @import "./includes/global/header";
+
+@import "./includes/pages/index/subheader";
+
 @import "./includes/global/footer";

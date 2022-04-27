@@ -1,1 +1,41 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.__width-1200 {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header {
+  height: 130px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.header .title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 60px;
+  line-height: 66px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+.subheader {
+  background: url("../../../../images/bg-desktop-light.jpg") no-repeat;
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  margin-top: -130px;
+}
+/*# sourceMappingURL=main.css.map */
