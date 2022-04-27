@@ -1,0 +1,14 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "main.scss",
+        "utils/_colors.scss",
+        "mixins/_media.scss",
+        "mixins/_fonts.scss",
+        "includes/global/_header.scss",
+        "includes/global/_footer.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

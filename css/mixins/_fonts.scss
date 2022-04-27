@@ -1,0 +1,19 @@
+@mixin font_josefin {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+@mixin title($f_size, $f_weight, $l_height, $color) {
+  @include font_josefin;
+  font-size: $f_size;
+  line-height: $l_height;
+  color: $color;
+  font-weight: $f_weight;
+}
+
+@mixin text($f_size, $f_weight, $l_height, $color) {
+  @include font_josefin;
+  font-size: $f_size;
+  line-height: $l_height;
+  color: $color;
+  font-weight: $f_weight;
+}
