@@ -37,6 +37,15 @@
       &::placeholder {
         color: $manatee;
       }
+
+      &.__active {
+        background-color: $yankees_blue;
+        color: $periwinkle;
+
+        &::placeholder {
+          color: $rhythm;
+        }
+      }
     }
   }
 }

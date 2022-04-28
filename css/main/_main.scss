@@ -6,4 +6,8 @@
 
 body {
   background: $lotion;
+
+  &.__active {
+    background: $eerie_black;
+  }
 }
