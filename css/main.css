@@ -171,6 +171,9 @@ body.__active {
           box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.4);
   margin-top: -100px;
   background: #fff;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .content ul.__active {
@@ -232,8 +235,16 @@ body.__active {
   font-weight: 700;
 }
 
+.content ul li:last-child span:last-child {
+  cursor: pointer;
+}
+
 .content ul li:last-child span:last-child:hover {
   color: #484b6a;
+}
+
+.content ul li:last-child .status a {
+  cursor: pointer;
 }
 
 .content ul li:last-child .status a:nth-of-type(2) {
