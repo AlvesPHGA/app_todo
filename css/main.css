@@ -102,11 +102,15 @@ body.__active {
           justify-content: center;
 }
 
+.subheader .__width-1200 form {
+  width: 70%;
+}
+
 .subheader .__width-1200 .new_todo {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 70%;
+  width: 100%;
   border-radius: 5px;
   padding: 10px 20px;
   border: 0;

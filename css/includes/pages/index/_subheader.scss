@@ -20,9 +20,13 @@
     align-items: center;
     justify-content: center;
 
+    form {
+      width: 70%;
+    }
+
     .new_todo {
       height: fit-content;
-      width: 70%;
+      width: 100%;
       border-radius: 5px;
       padding: 10px 20px;
       border: 0;
