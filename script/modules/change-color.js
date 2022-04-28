@@ -4,16 +4,19 @@ export default function change_color() {
   icon_img.addEventListener("click", change);
 
   function change() {
+    change_icon();
+    change_backColor();
+  }
+
+  function change_icon() {
     const icons = icon_img.querySelectorAll("img");
 
     icons.forEach((i) => {
       i.classList.toggle("__hidden");
     });
-
-    change_back_sub();
   }
 
-  function change_back_sub() {
+  function change_backColor() {
     const body = document.querySelector("body");
     const subheader = document.querySelector(".subheader");
     const input = subheader.querySelector(".new_todo");
@@ -25,10 +28,5 @@ export default function change_color() {
     utils.forEach((i) => {
       i.classList.toggle("__active");
     });
-  }
-
-  function change_body_backColor() {
-    const body = document.querySelector("body");
-    body.classList.toggle("__active");
   }
 }
