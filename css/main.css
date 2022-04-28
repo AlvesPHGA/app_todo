@@ -60,6 +60,10 @@ body {
           transform: scale(1.4);
 }
 
+.header .__width-1200 .img-change .__hidden {
+  display: none;
+}
+
 .subheader {
   background: url("../../../../images/bg-desktop-light.jpg") no-repeat;
   width: 100%;
