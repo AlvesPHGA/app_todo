@@ -24,6 +24,8 @@ export default function add_todo() {
   function add_item(item) {
     list.push(item);
 
+    const score = document.querySelector("[data-score]");
+
     const ul = document.querySelector("ul");
 
     const li = document.createElement("li");
@@ -37,5 +39,7 @@ export default function add_todo() {
     li.appendChild(span);
 
     ul.appendChild(li);
+
+    score.innerHTML = list.length;
   }
 }
