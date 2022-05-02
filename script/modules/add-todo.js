@@ -1,10 +1,9 @@
 export default function add_todo() {
   const form = document.querySelector("form");
-  const c_list = document.querySelector(".clean_list");
+
   const list = [];
 
   form.addEventListener("submit", event);
-  c_list.addEventListener("click", all_clean);
 
   function event(e) {
     e.preventDefault();
@@ -38,17 +37,5 @@ export default function add_todo() {
     li.appendChild(span);
 
     ul.appendChild(li);
-  }
-
-  function all_clean() {
-    const ul = document.querySelector("ul");
-    const last_li = document.querySelector(".last-li");
-    const li = ul.querySelectorAll("li");
-    // const hasAttr = li.hasAttribute("data-todo");
-
-    // if (ul.firstChild.getAttribute("[data-todo]"))
-    //   console.log(ul.removeChild(ul.firstChild));
-
-    console.log((li.dataset = todo));
   }
 }
