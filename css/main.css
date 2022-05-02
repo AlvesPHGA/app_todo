@@ -216,6 +216,31 @@ body.__active {
   pointer-events: none;
 }
 
+.content .list-todo ul li input[type="radio"]:checked + label::before {
+  background-image: -webkit-gradient(linear, right top, left top, from(#57ddff), to(#c058f3));
+  background-image: linear-gradient(to left, #57ddff, #c058f3);
+}
+
+.content .list-todo ul li label {
+  position: relative;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.content .list-todo ul li label::before {
+  width: 20px;
+  height: 20px;
+  content: "";
+  border: 1px solid #9394a5;
+  border-radius: 50%;
+}
+
 .content .list-todo .box-stts {
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
@@ -257,24 +282,6 @@ body.__active {
 .content .list-todo .box-stts .status .__active {
   color: #3a7bfd;
   pointer-events: none;
-}
-
-.content [data-todo] span {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 10px;
-}
-
-.content [data-todo] span::before {
-  width: 20px;
-  height: 20px;
-  content: "";
-  border: 1px solid #9394a5;
-  border-radius: 50%;
 }
 
 .footer {

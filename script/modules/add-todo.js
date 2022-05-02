@@ -31,14 +31,25 @@ export default function add_todo() {
     const ul = document.querySelector("ul");
 
     const li = document.createElement("li");
-    const span = document.createElement("span");
+    const input = document.createElement("input");
+    const label = document.createElement("label");
 
-    span.textContent = item;
+    label.textContent = item;
 
     li.setAttribute("data-todo", "");
     li.setAttribute("name", "todo");
 
-    li.appendChild(span);
+    input.setAttribute("type", "radio");
+    input.setAttribute("name", "todo");
+
+    // list.reduce((i) => {
+    input.setAttribute("id", `${list.length}`);
+    // }, 0);
+
+    label.setAttribute("for", `${list.length}`);
+
+    li.appendChild(input);
+    li.appendChild(label);
 
     ul.appendChild(li);
 
