@@ -1,9 +1,11 @@
 export default function add_todo() {
   const form = document.querySelector("form");
+  const c_list = document.querySelector(".clean_list");
 
   const list = [];
 
   form.addEventListener("submit", event);
+  c_list.addEventListener("click", all_clean);
 
   function event(e) {
     e.preventDefault();
@@ -39,6 +41,17 @@ export default function add_todo() {
     li.appendChild(span);
 
     ul.appendChild(li);
+
+    score.innerHTML = list.length;
+  }
+
+  function all_clean() {
+    const list_todo = document.querySelector("ul");
+    const score = document.querySelector("[data-score]");
+
+    while (list_todo.firstChild) list_todo.removeChild(list_todo.firstChild);
+
+    while (list.length) list.pop();
 
     score.innerHTML = list.length;
   }
