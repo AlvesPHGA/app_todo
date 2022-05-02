@@ -167,44 +167,39 @@ body.__active {
           justify-content: center;
 }
 
-.content ul {
+.content .list-todo {
   width: 70%;
-  border: 0;
-  border-radius: 5px;
   -webkit-box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  border: 0;
   margin-top: -100px;
   background: #fff;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.content ul.__active {
+.content .list-todo ul {
+  width: 100%;
+}
+
+.content .list-todo ul.__active {
   background-color: #25273c;
 }
 
-.content ul.__active li {
+.content .list-todo ul.__active li {
   color: #cacde8;
 }
 
-.content ul.__active li:last-child {
-  color: #484b6a;
-}
-
-.content ul.__active li:last-child span:last-child:hover {
-  color: #cacde8;
-}
-
-.content ul.__active li:last-child .status a:hover {
-  color: #cacde8;
-}
-
-.content ul.__active li:last-child .status a.__active {
-  color: #3a7bfd;
-}
-
-.content ul li {
+.content .list-todo ul li {
   padding: 10px 20px;
   border-bottom: 1px solid #9394a5;
   list-style: none;
@@ -215,52 +210,53 @@ body.__active {
   font-weight: 400;
 }
 
-.content ul li input[type="radio"] {
+.content .list-todo ul li input[type="radio"] {
   opacity: 0;
   position: absolute;
   pointer-events: none;
 }
 
-.content ul li:last-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 0;
+.content .list-todo .box-stts {
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #9394a5;
   font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 20px;
 }
 
-.content ul li:last-child span:last-child {
+.content .list-todo .box-stts .clean_list {
   cursor: pointer;
 }
 
-.content ul li:last-child span:last-child:hover {
+.content .list-todo .box-stts .clean_list:hover {
   color: #484b6a;
 }
 
-.content ul li:last-child .status a {
+.content .list-todo .box-stts .status a {
   cursor: pointer;
 }
 
-.content ul li:last-child .status a:nth-of-type(2) {
+.content .list-todo .box-stts .status a:nth-of-type(2) {
   margin: 0 10px;
 }
 
-.content ul li:last-child .status a:hover {
+.content .list-todo .box-stts .status a:hover {
   color: #484b6a;
 }
 
-.content ul li:last-child .status a.__active {
+.content .list-todo .box-stts .status .__active {
   color: #3a7bfd;
+  pointer-events: none;
 }
 
 .content [data-todo] span {
