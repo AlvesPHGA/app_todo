@@ -17,6 +17,7 @@ export default function add_todo() {
 
     clean();
     add_item(item);
+    // todo_checked();
   }
 
   function clean() {
@@ -47,6 +48,7 @@ export default function add_todo() {
     span.setAttribute("class", "delete");
 
     input.setAttribute("id", `${list.length}`);
+    input.setAttribute("value", `${item}`);
 
     label.setAttribute("for", `${list.length}`);
 
@@ -67,6 +69,14 @@ export default function add_todo() {
 
       score.innerHTML = list.length;
     }
+
+    let l_todo = document.querySelectorAll("label");
+
+    l_todo.forEach((i) => {
+      i.addEventListener("click", (e) => {
+        e.target.closest("li").setAttribute("data-completed", "");
+      });
+    });
   }
 
   function all_clean() {
@@ -78,5 +88,22 @@ export default function add_todo() {
     while (list.length) list.pop();
 
     score.innerHTML = list.length;
+  }
+
+  function todo_checked() {
+    const todo = document.querySelectorAll("label");
+
+    todo.forEach((i) => {
+      console.log(i.innerHTML);
+
+      if (i.style.textDecoration === "line-through") {
+        alert(true);
+      } else {
+        alert(false);
+      }
+    });
+    // todo.checked;
+
+    // console.log(todo);
   }
 }
