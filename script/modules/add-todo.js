@@ -33,27 +33,40 @@ export default function add_todo() {
     const li = document.createElement("li");
     const input = document.createElement("input");
     const label = document.createElement("label");
+    const span = document.createElement("span");
 
     label.textContent = item;
+    span.textContent = "X";
 
     li.setAttribute("data-todo", "");
     li.setAttribute("name", "todo");
 
-    input.setAttribute("type", "radio");
+    input.setAttribute("type", "checkbox");
     input.setAttribute("name", "todo");
 
-    // list.reduce((i) => {
+    span.setAttribute("class", "delete");
+
     input.setAttribute("id", `${list.length}`);
-    // }, 0);
 
     label.setAttribute("for", `${list.length}`);
 
     li.appendChild(input);
     li.appendChild(label);
+    li.appendChild(span);
 
     ul.appendChild(li);
 
     score.innerHTML = list.length;
+
+    span.onclick = change_score;
+
+    function change_score(item) {
+      let item_todo = list.indexOf(item);
+
+      item.currentTarget.closest("li").remove(list.splice(item_todo, 1));
+
+      score.innerHTML = list.length;
+    }
   }
 
   function all_clean() {
