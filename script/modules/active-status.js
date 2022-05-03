@@ -3,6 +3,8 @@ export default function active_status() {
 
   const link_active = document.querySelector(".status");
 
+  active[0].classList.add("__active");
+
   link_active.addEventListener("click", (e) => {
     status_active(e);
   });
