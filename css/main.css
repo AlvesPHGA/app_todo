@@ -187,22 +187,21 @@ body.__active {
           flex-direction: column;
 }
 
-.content .list-todo ul {
+.content .list-todo .todo {
   width: 100%;
 }
 
-.content .list-todo ul.__active {
+.content .list-todo .todo.__active {
   background-color: #25273c;
 }
 
-.content .list-todo ul.__active li {
+.content .list-todo .todo.__active .item-todo {
   color: #cacde8;
 }
 
-.content .list-todo ul li {
+.content .list-todo .todo .item-todo {
   padding: 10px 20px;
   border-bottom: 1px solid #9394a5;
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,6 +211,7 @@ body.__active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
   font-family: "Josefin Sans", sans-serif;
   font-size: 20px;
   line-height: 30px;
@@ -219,56 +219,22 @@ body.__active {
   font-weight: 400;
 }
 
-.content .list-todo ul li input[type="checkbox"] {
-  opacity: 0;
-  position: absolute;
-  pointer-events: none;
-}
-
-.content .list-todo ul li input[type="checkbox"]:checked + label {
-  text-decoration: line-through;
-  opacity: 0.7;
-}
-
-.content .list-todo ul li input[type="checkbox"]:checked + label::before {
-  background-image: -webkit-gradient(linear, right top, left top, from(#57ddff), to(#c058f3));
-  background-image: linear-gradient(to left, #57ddff, #c058f3);
-}
-
-.content .list-todo ul li label {
-  position: relative;
-  z-index: 10;
+.content .list-todo .todo .item-todo .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
 }
 
-.content .list-todo ul li label::before {
+.content .list-todo .todo .item-todo .item::before {
   width: 20px;
   height: 20px;
   content: "";
   border: 1px solid #9394a5;
   border-radius: 50%;
-}
-
-.content .list-todo ul li .delete {
-  font-weight: 400;
-  font-size: 30px;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.content .list-todo ul li .delete:hover {
-  color: #161722;
 }
 
 .content .list-todo .box-stts {
