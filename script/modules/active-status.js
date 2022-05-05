@@ -1,4 +1,5 @@
 export default function active_status() {
+  const input_form = document.querySelector("form");
   const active = document.querySelectorAll("[data-status]");
 
   const link_active = document.querySelector(".status");
@@ -33,6 +34,7 @@ export default function active_status() {
         all.forEach((i) => {
           i.classList.remove("__hidden");
         });
+        input_form.style.pointerEvents = "auto";
         break;
 
       case "active":
@@ -42,6 +44,7 @@ export default function active_status() {
         active.forEach((i) => {
           i.classList.remove("__hidden");
         });
+        input_form.style.pointerEvents = "none";
         break;
 
       case "completed":
@@ -51,6 +54,8 @@ export default function active_status() {
         completed.forEach((i) => {
           i.classList.remove("__hidden");
         });
+        input_form.style.pointerEvents = "none";
+        break;
     }
   }
 }
