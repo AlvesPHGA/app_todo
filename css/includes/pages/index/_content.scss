@@ -52,140 +52,31 @@
             border-radius: 50%;
           }
         }
+
+        &.__completed {
+          .item {
+            text-decoration: line-through;
+
+            &::before {
+              width: 20px;
+              height: 20px;
+              content: "";
+              border: 1px solid $manatee;
+              border-radius: 50%;
+              background: linear-gradient(
+                to left,
+                hsl(192, 100%, 67%),
+                hsl(280, 87%, 65%)
+              );
+            }
+          }
+        }
+
+        &.__hidden {
+          display: none;
+        }
       }
     }
-
-    // ul {
-    //   background-color: transparent;
-
-    //   &.__active {
-    //     background-color: $yankees_blue;
-
-    //     [data-todo] {
-    //       color: $periwinkle;
-    //     }
-    //   }
-
-    //   [data-todo] {
-    //     padding: 10px 20px;
-    //     border-bottom: 1px solid $manatee;
-    //     list-style: none;
-    //     display: flex;
-    //     justify-content: space-between;
-    //     align-items: center;
-    //     background: transparent;
-
-    //     @include text(
-    //       $f_size: 20px,
-    //       $f_weight: 400,
-    //       $l_height: 30px,
-    //       $color: $independence
-    //     );
-
-    //     input[type="checkbox"] {
-    //       opacity: 0;
-    //       position: absolute;
-    //       pointer-events: none;
-    //     }
-
-    //     &.__active {
-    //       // label {
-    //       //   text-decoration: line-through;
-    //       //   opacity: 0.7;
-
-    //       //   &::before {
-    //       //     background-image: linear-gradient(
-    //       //       to left,
-    //       //       hsl(192, 100%, 67%),
-    //       //       hsl(280, 87%, 65%)
-    //       //     );
-    //       //   }
-
-    //       input[type="checkbox"] {
-    //         &:checked + label {
-    //           text-decoration: line-through;
-    //           opacity: 0.7;
-
-    //           &::before {
-    //             background-image: linear-gradient(
-    //               to left,
-    //               hsl(192, 100%, 67%),
-    //               hsl(280, 87%, 65%)
-    //             );
-    //           }
-    //         }
-
-    //         &:checked + label::before {
-    //           background-image: linear-gradient(
-    //             to left,
-    //             hsl(192, 100%, 67%),
-    //             hsl(280, 87%, 65%)
-    //           );
-    //         }
-    //       }
-    //     }
-
-    //     //   &:checked + label {
-    //     //     text-decoration: line-through;
-    //     //     opacity: 0.7;
-    //     //   }
-
-    //     //   &:checked + label::before {
-    //     //     background-image: linear-gradient(
-    //     //       to left,
-    //     //       hsl(192, 100%, 67%),
-    //     //       hsl(280, 87%, 65%)
-    //     //     );
-    //     //   }
-    //     // }
-
-    //     label {
-    //       display: flex;
-    //       align-items: center;
-    //       gap: 10px;
-    //       &::before {
-    //         width: 20px;
-    //         height: 20px;
-    //         content: "";
-    //         border: 1px solid $manatee;
-    //         border-radius: 50%;
-    //       }
-    //     }
-
-    //     .delete {
-    //       font-weight: 400;
-    //       font-size: 30px;
-    //       cursor: pointer;
-    //       display: flex;
-    //       align-items: center;
-
-    //       &:hover {
-    //         color: $eerie_black;
-    //       }
-    //     }
-    //   }
-
-    //   // &.__active {
-    //   //   font-size: large;
-    //   // input[type="checkbox"] {
-    //   //   opacity: 0;
-    //   //   position: absolute;
-    //   //   pointer-events: none;
-    //   //   &:checked + label {
-    //   //     text-decoration: line-through;
-    //   //     opacity: 0.7;
-    //   //   }
-
-    //   //   &:checked + label::before {
-    //   //     background-image: linear-gradient(
-    //   //       to left,
-    //   //       hsl(192, 100%, 67%),
-    //   //       hsl(280, 87%, 65%)
-    //   //     );
-    //   //   }
-    //   // }
-    //   // }
-    // }
 
     .box-stts {
       @include text(
@@ -222,6 +113,31 @@
         .__active {
           color: $ultramarine_blue;
           pointer-events: none;
+        }
+      }
+    }
+
+    &.__active {
+      background-color: $yankees_blue;
+      box-shadow: none;
+
+      .item-todo {
+        color: $rhythm;
+      }
+
+      .box-stts {
+        color: $independence;
+
+        .status a {
+          &:hover {
+            color: $periwinkle;
+          }
+        }
+
+        .clean_list {
+          &:hover {
+            color: $periwinkle;
+          }
         }
       }
     }

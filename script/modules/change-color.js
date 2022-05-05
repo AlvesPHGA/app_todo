@@ -21,7 +21,7 @@ export default function change_color() {
     const subheader = document.querySelector(".subheader");
     const input = subheader.querySelector(".new_todo");
 
-    const ul = document.querySelector("ul");
+    const ul = document.querySelector(".list-todo");
 
     const utils = [body, subheader, input, ul];
 

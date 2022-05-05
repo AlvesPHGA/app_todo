@@ -14,9 +14,17 @@ export default function add_todo() {
 
   function init() {
     const item = form.querySelector("[data-newTodo]").value;
+    const space = "/^(S)/";
 
     clean();
-    add_item(item);
+
+    if (item.length < 4 || item === space) {
+      alert(
+        "favor preencher corretamente \n - Item deve ter mais que 4 caracteres \n - Não deve iniciar com espaço"
+      );
+    } else {
+      add_item(item);
+    }
   }
 
   // reset input text
@@ -33,7 +41,7 @@ export default function add_todo() {
 
     list_todo.insertAdjacentHTML(
       "afterbegin",
-      `<div class="item-todo" data-todo>
+      `<div class="item-todo __active" data-todo>
       <span class="item">${item}</span>
       <span class='close'>X</span>
       </div>`
@@ -49,6 +57,7 @@ export default function add_todo() {
   }
 
   function check(item) {
+    item.currentTarget.classList.toggle("__completed");
     item.currentTarget.classList.toggle("__active");
   }
 

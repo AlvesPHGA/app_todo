@@ -3,7 +3,7 @@ export default function active_status() {
 
   const link_active = document.querySelector(".status");
 
-  const todo = document.querySelector("[data-todo]");
+  const todo = document.querySelectorAll("[data-todo]");
 
   active[0].classList.add("__active");
 
@@ -18,14 +18,39 @@ export default function active_status() {
 
     e.target.classList.add("__active");
 
-    // show_todo(e);
+    show_todo(e);
   }
 
   function show_todo(e) {
-    if (
-      e.target.classList.contains("__active") &&
-      e.target.innerHTML === "Active"
-    )
-      console.log(document.get);
+    const all = document.querySelectorAll("[data-todo]");
+    const active = document.querySelectorAll(".__active");
+    const completed = document.querySelectorAll(".__completed");
+
+    const el = e.target.dataset.status;
+
+    switch (el) {
+      case "all":
+        all.forEach((i) => {
+          i.classList.remove("__hidden");
+        });
+        break;
+
+      case "active":
+        completed.forEach((i) => {
+          i.classList.add("__hidden");
+        });
+        active.forEach((i) => {
+          i.classList.remove("__hidden");
+        });
+        break;
+
+      case "completed":
+        active.forEach((i) => {
+          i.classList.add("__hidden");
+        });
+        completed.forEach((i) => {
+          i.classList.remove("__hidden");
+        });
+    }
   }
 }
