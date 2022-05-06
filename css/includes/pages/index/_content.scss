@@ -13,6 +13,21 @@
     display: flex;
     flex-direction: column;
 
+    @include mobile_s {
+      margin-top: -50px;
+      width: 100%;
+    }
+
+    @include mobile_m {
+      margin-top: -50px;
+      width: 100%;
+    }
+
+    @include mobile_l {
+      margin-top: -50px;
+      width: 100%;
+    }
+
     .todo {
       width: 100%;
 
@@ -38,6 +53,21 @@
           $l_height: 30px,
           $color: $independence
         );
+
+        @include mobile_s {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        @include mobile_m {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        @include mobile_l {
+          font-size: 16px;
+          line-height: 24px;
+        }
 
         .item {
           display: flex;
@@ -91,6 +121,24 @@
       justify-content: space-between;
       padding: 10px 20px;
 
+      @include mobile_s {
+        padding: 10px;
+        justify-content: center;
+        text-align: center;
+      }
+
+      @include mobile_m {
+        padding: 10px;
+        justify-content: center;
+        text-align: center;
+      }
+
+      @include mobile_l {
+        padding: 10px;
+        justify-content: center;
+        text-align: center;
+      }
+
       .clean_list {
         cursor: pointer;
 
@@ -100,10 +148,34 @@
       }
 
       .status {
+        @include mobile_s {
+          text-align: center;
+        }
+
+        @include mobile_m {
+          text-align: center;
+        }
+
+        @include mobile_l {
+          text-align: center;
+        }
         a {
           cursor: pointer;
+
           &:nth-of-type(2) {
             margin: 0 10px;
+
+            @include mobile_s {
+              margin: 0 5px;
+            }
+
+            @include mobile_m {
+              margin: 0 5px;
+            }
+
+            @include mobile_l {
+              margin: 0 5px;
+            }
           }
 
           &:hover {

@@ -5,16 +5,18 @@
   display: flex;
   align-items: flex-end;
 
+  border: 1px solid green;
+
   @include mobile_s {
-    height: 100px;
+    height: 70px;
   }
 
   @include mobile_m {
-    height: 100px;
+    height: 70px;
   }
 
   @include mobile_l {
-    height: 100px;
+    height: 70px;
   }
 
   .title {
