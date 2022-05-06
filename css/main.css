@@ -50,7 +50,6 @@ body.__active {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  border: 1px solid green;
 }
 
 @media (max-width: 320px) {
@@ -150,7 +149,6 @@ body.__active {
     width: 100%;
     background-size: cover;
     margin-top: -70px;
-    border: 1px solid red;
   }
 }
 

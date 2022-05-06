@@ -5,8 +5,6 @@
   display: flex;
   align-items: flex-end;
 
-  border: 1px solid green;
-
   @include mobile_s {
     height: 70px;
   }
