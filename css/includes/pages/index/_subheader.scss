@@ -6,6 +6,31 @@
   margin-top: -130px;
   display: flex;
 
+  @include mobile_s {
+    background: url("../../../../images/bg-mobile-light.jpg") no-repeat center;
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    margin-top: -100px;
+    border: 1px solid red;
+  }
+
+  @include mobile_m {
+    background: url("../../../../images/bg-mobile-light.jpg") no-repeat center;
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    margin-top: -100px;
+  }
+
+  @include mobile_l {
+    background: url("../../../../images/bg-mobile-light.jpg") no-repeat center;
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    margin-top: -100px;
+  }
+
   &.__active {
     background: url("../../../../images/bg-desktop-dark.jpg") no-repeat;
     width: 100%;
@@ -13,6 +38,31 @@
     background-size: cover;
     margin-top: -130px;
     display: flex;
+
+    @include mobile_s {
+      background: url("../../../../images/bg-mobile-dark.jpg") no-repeat center;
+      height: 200px;
+      width: 100%;
+      background-size: cover;
+      margin-top: -100px;
+      border: 1px solid red;
+    }
+
+    @include mobile_m {
+      background: url("../../../../images/bg-mobile-dark.jpg") no-repeat center;
+      height: 200px;
+      width: 100%;
+      background-size: cover;
+      margin-top: -100px;
+    }
+
+    @include mobile_l {
+      background: url("../../../../images/bg-mobile-dark.jpg") no-repeat center;
+      height: 200px;
+      width: 100%;
+      background-size: cover;
+      margin-top: -100px;
+    }
   }
 
   .__width-1200 {
@@ -20,8 +70,35 @@
     align-items: center;
     justify-content: center;
 
+    @include mobile_s {
+      padding-bottom: 20px;
+      align-items: flex-end;
+    }
+
+    @include mobile_m {
+      padding-bottom: 20px;
+      align-items: flex-end;
+    }
+
+    @include mobile_l {
+      padding-bottom: 20px;
+      align-items: flex-end;
+    }
+
     form {
       width: 70%;
+
+      @include mobile_s {
+        width: 100%;
+      }
+
+      @include mobile_m {
+        width: 100%;
+      }
+
+      @include mobile_l {
+        width: 100%;
+      }
     }
 
     .new_todo {
@@ -37,6 +114,21 @@
         $l_height: 30px,
         $color: $independence
       );
+
+      @include mobile_s {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      @include mobile_m {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      @include mobile_l {
+        font-size: 16px;
+        line-height: 24px;
+      }
 
       &::placeholder {
         color: $manatee;
