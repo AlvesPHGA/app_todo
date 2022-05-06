@@ -14,16 +14,15 @@ export default function add_todo() {
 
   function init() {
     const item = form.querySelector("[data-newTodo]").value;
-    const space = "/^(S)/";
 
     clean();
 
-    if (item.length < 4 || item === space) {
+    if (item.length < 4 || item.search(/\S/)) {
       alert(
-        "favor preencher corretamente \n - Item deve ter mais que 4 caracteres \n - Não deve iniciar com espaço"
+        "Favor preencher corretamente \n - Item deve ter mais que 4 caracteres \n - Não deve iniciar com espaço"
       );
     } else {
-      add_item(item);
+      add_item(item.trim());
     }
   }
 
