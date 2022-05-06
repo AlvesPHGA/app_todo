@@ -53,12 +53,30 @@ export default function add_todo() {
     item_todo.onclick = check;
 
     score.innerHTML = list.length;
+
+    save_local(item);
   }
 
   function check(item) {
     item.currentTarget.classList.toggle("__completed");
     item.currentTarget.classList.toggle("__active");
   }
+
+  function save_local(item) {
+    localStorage[item] = item;
+  }
+
+  function set_item() {
+    let item_todo = document.querySelector("[data-todo]");
+    const items = Object.keys(localStorage);
+
+    items.forEach((i) => {
+      console.log((item_todo[i].value = localStorage[i]));
+      i.change();
+    });
+  }
+
+  set_item();
 
   // delete item
   function del(item) {
