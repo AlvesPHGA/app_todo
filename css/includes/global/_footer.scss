@@ -8,4 +8,16 @@
     $l_height: 24px,
     $color: $independence
   );
+
+  @include mobile_s {
+    padding-top: 50px;
+  }
+
+  @include mobile_m {
+    padding-top: 50px;
+  }
+
+  @include mobile_l {
+    padding-top: 50px;
+  }
 }

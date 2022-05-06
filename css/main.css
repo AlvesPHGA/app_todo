@@ -392,4 +392,22 @@ body.__active {
   color: #484b6a;
   font-weight: 400;
 }
+
+@media (max-width: 320px) {
+  .footer {
+    padding-top: 50px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+  .footer {
+    padding-top: 50px;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 425px) {
+  .footer {
+    padding-top: 50px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
