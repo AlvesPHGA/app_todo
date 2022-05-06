@@ -54,7 +54,7 @@ export default function add_todo() {
 
     score.innerHTML = list.length;
 
-    save_local(item);
+    // save_local(item);
   }
 
   function check(item) {
@@ -76,7 +76,7 @@ export default function add_todo() {
     });
   }
 
-  set_item();
+  // set_item();
 
   // delete item
   function del(item) {
